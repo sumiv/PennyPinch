@@ -7,25 +7,22 @@ app = Flask(__name__) # __name__ refers to the module name
 def index():
     return render_template('index.html')
 
+#page to resources
+@app.get('/PennyPinch/templates/resources.html')
+def resources():
+    return render_template('resources.html')
+
+#page to about
+@app.get('/PennyPinch/templates/about.html')
 def about():
-    return '<h1>about</h1>'
+    return render_template('about.html')
 
-# @app.get('/about')
-# def about():
-#     return render_template('about.html')
+#page to quiz
+@app.get('/PennyPinch/templates/quiz.html')
+def quiz():
+    return render_template('quiz.html')
 
-# @app.get('/home')
-# def about():
-#     return render_template('index.html')
-
-# @app.get('/plan')
-# def about():
-#     return render_template('plan.html')
-
-# @app.get('/quiz')
-# def about():
-#     return render_template('quiz.html')
-
-# @app.get('/resources')
-# def about():
-#     return render_template('resources.html')
+#page to plan
+@app.get('/PennyPinch/templates/plan.html')
+def plan():
+    return render_template('plan.html')
