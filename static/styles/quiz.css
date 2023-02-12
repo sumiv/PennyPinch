@@ -21,6 +21,18 @@
     background-image: linear-gradient(to right, #f6d365 0%, #ffca28 51%, #f57f17 100%);
 }
 
+.quiz-title{
+    font-size: 45pt !important;
+}
+.quiz-question{
+    margin-top: 20pt;
+}
+
+.question-qte{
+    font-weight: 500;
+    color: white;
+    font-size: larger;
+}
 .modal-content{
     text-align: center !important;
 }
