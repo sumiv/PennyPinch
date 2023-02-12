@@ -1,4 +1,5 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
+
 
 app = Flask(__name__) # __name__ refers to the module name
 
@@ -18,8 +19,27 @@ def about():
     return render_template('about.html')
 
 #page to quiz
-@app.get('/PennyPinch/templates/quiz.html')
+@app.route('/PennyPinch/templates/quiz.html', methods= ['GET', 'POST'])
 def quiz():
+    splugerTotal = 0
+    hoarderTotal = 0
+    fomoTotal = 0
+    answer1 = ""
+    answer2 = ""
+    answer3 = ""
+    answer4 = ""
+    email = ""
+    password = ""
+
+    if request.method == 'POST':
+        #if the user presses submit, we will store their answers in local variables
+        answer1 = request.form.get('answer1', '')
+        answer2 = request.form.get('answer2', '')
+        answer3 = request.form.get('answer3', '')
+        answer4 = request.form.get('answer4', '')
+        email = request.form.get('emailAddress', '')
+        password = request.form.get('password', '')
+
     return render_template('quiz.html')
 
 #page to plan
@@ -41,3 +61,5 @@ def hoarder():
 @app.get('/PennyPinch/templates/fomo.html')
 def fomo():
     return render_template('fomo.html')
+
+
