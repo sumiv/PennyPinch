@@ -39,6 +39,7 @@ def quiz():
         answer4 = request.form.get('answer4', '')
         email = request.form.get('emailAddress', '')
         password = request.form.get('password', '')
+        return render_template('plan.html')
 
     return render_template('quiz.html')
 
