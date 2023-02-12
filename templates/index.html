@@ -3,8 +3,13 @@
 {% block title %}Pocket Pinch | Home{% endblock %}
 
 {% block body %}
-<h1 class="mb-5">Pocket Pinch</h1>
-<p class="mb-3">Have trouble with money? Pocket Pinch is here to help!</p>
-<img src="../static/images/finlit.jpeg" alt="financial literacy">
+
+    <div class="index-main">
+<img src="../static/images/PPcoindrop.gif" alt="coin drop gif" class="main-img">
+<p>Have trouble with money? Pocket Pinch is here to help!</p>
+<img src="../static/images/finlit.jpeg" alt="financial literacy" class="main-img">
+
 <p>Take our quiz to get started!</p>
+<button type="button" class="pp-btn q-btn" onclick="location.href='/PennyPinch/templates/quiz.html'">Get Started</button>
+    </div>
 {% endblock %}
