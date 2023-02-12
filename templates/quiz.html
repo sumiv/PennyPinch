@@ -4,6 +4,80 @@
 
 {% block body %}
 <h1 class="mb-5">Quiz</h1>
-<p class="mb-3">Enter Quiz here</p>
-<p>enter quiz text here</p>
+<div>
+    <form method="POST">
+        <!-- Start main quiz --->
+        <label for="question1">Do you get sale notifications from your favorite stores?</label><br>
+        <input type="radio" name="answer1" id="answer1" value="yes">
+        <label for="yes"> Yes </label><br>
+        <input type="radio" name="answer1" id="answer1" value="no">
+        <label for="no"> No </label><br>
+        <input type="radio" name="answer1" id="answer1" value="sometimes">
+        <label for="sometimes"> Sometimes </label><br>
+
+
+        <label for="question2">How much of your paycheck is usually left after 1 week?</label><br>
+        <input type="radio" name="answer2" id="answer2" value="90">
+        <label for="90"> 90% </label><br>
+        <input type="radio" name="answer2" id="answer2" value="75">
+        <label for="75"> 75% </label><br>
+        <input type="radio" name="answer2" id="answer2" value="50">
+        <label for="50"> 50% </label><br>
+        <input type="radio" name="answer2" id="answer2" value="25">
+        <label for="25"> 25% </label><br>
+        <input type="radio" name="answer2" id="answer2" value="0">
+        <label for="0"> 0% </label><br>
+
+        <label for="question3">Do you participate in any saving programs or investing?</label><br>
+        <input type="radio" name="answer3" id="answer3" value="both">
+        <label for="both"> Yes, both </label><br>
+        <input type="radio" name="answer3" id="answer3" value="savings">
+        <label for="savings"> Yes, savings </label><br>
+        <input type="radio" name="answer3" id="answer3" value="investing">
+        <label for="investing"> Yes, investing </label><br>
+        <input type="radio" name="answer3" id="answer3" value="none">
+        <label for="none"> No, not at all </label><br>
+
+        <label for="question4">Do you only buy non-necessities when it is on sale?</label><br>
+        <input type="radio" name="answer4" id="answer4" value="Yes">
+        <label for="yes"> Yes </label><br>
+        <input type="radio" name="answer4" id="answer4" value="whenever">
+        <label for="whenever"> No, I buy when I want to </label><br>
+        <input type="radio" name="answer4" id="answer4" value="none">
+        <label for="none"> No, not even on sale </label><br>
+
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#signupModal">
+            Next
+        </button>
+
+        <!-- modal popup for user sign up --->
+        <div class="modal fade" id="signupModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="signupModal">Sign Up for PocketPinch</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+
+                        <label for="emailAddress">Email Address</label><br>
+                        <input type="email" name="email" id="email" autocomplete="off"><br>
+
+                        <label for="password">Password</label><br>
+                        <input type="password" name="password" id="password" autocomplete="off"><br>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Sign-Up</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </form>
+</div>
+
+
+
 {% endblock %}
