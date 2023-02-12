@@ -26,3 +26,18 @@ def quiz():
 @app.get('/PennyPinch/templates/plan.html')
 def plan():
     return render_template('plan.html')
+
+#page to splurger
+@app.get('/PennyPinch/templates/splurger.html')
+def splurger():
+    return render_template('splurger.html')
+
+#page to hoarder 
+@app.get('/PennyPinch/templates/hoarder.html')
+def hoarder():
+    return render_template('hoarder.html')
+
+#page to fomo
+@app.get('/PennyPinch/templates/fomo.html')
+def fomo():
+    return render_template('fomo.html')
